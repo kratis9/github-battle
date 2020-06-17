@@ -1,18 +1,14 @@
 import React from "react";
 import ReactDom from "react-dom";
 import "./index.css";
-
-import Hello from "./Hello";
+import Popular from "./components/popular";
 
 class App extends React.Component {
   render() {
     return (
-      <Hello
-        name='krati'
-        auth={true}
-        logout={() => alert("Logout")}
-        header={<h1> 🖐</h1>}
-      />
+      <div className='container'>
+        <Popular />
+      </div>
     );
   }
 }
