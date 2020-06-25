@@ -19,6 +19,7 @@ module.exports = {
     ],
   },
   mode: "development",
+  devtool: "eval",
   plugins: [
     new HtmlWebpackPlugin({
       template: 'app/index.html'
