@@ -1,6 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { fetchPopularRepos } from "../utils/api";
+import {
+  FaUser,
+  FaStar,
+  FaCodeBranch,
+  FaExclamationTriangle,
+} from "react-icons/fa";
 
 function LanguagesNav({ selected, onUpdateLanguage }) {
   const languages = ["All", "Javascript", "Ruby", "Java", "Css", "Phython"];
@@ -50,17 +56,19 @@ function ReposGrid({ repos }) {
 
         return (
           <li key={html_url} className='repo bg-light'>
-            <h4 className='header-lg center-text'>
-              #{index + 1}
-            </h4>
-            <img src={avatar_url} alt={`Avatar for ${login}`} className="avatar" />
-            <h2 className="center-text">
-               <a  className="link"
-                href={html_url}>{login}</a>
-
+            <h4 className='header-lg center-text'>#{index + 1}</h4>
+            <img
+              src={avatar_url}
+              alt={`Avatar for ${login}`}
+              className='avatar'
+            />
+            <h2 className='center-text'>
+              <a className='link' href={html_url}>
+                {login}
+              </a>
             </h2>
           </li>
-        )
+        );
       })}
     </ul>
   );
