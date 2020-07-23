@@ -27,6 +27,29 @@ function Instructions() {
   );
 }
 
+class PlayerInput extends React.Component {
+  constructor(props) {
+    super(props)
+    
+    this.state = {
+      username:''
+    }
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+  handleSubmit(event) {
+    event.preventDefault()
+
+
+    this.props.onSubmit
+  }
+
+  render() {
+    return (
+      <form className='column-player' onSubmit={this.handleSubmit}></form>
+    )
+  }
+}
+
 export default class Battle extends React.Component {
   render() {
     return (
